@@ -7,7 +7,7 @@
 [![codecov.io](http://codecov.io/github/closescreen/Routes.jl/coverage.svg?branch=master)](http://codecov.io/github/closescreen/Routes.jl?branch=master)
 
 
-
+```
 julia> r1 = Routes.route("./RESULT/",:day=>r"(\d\d\d\d-\d\d-\d\d)",".gz")
 Routes.Route(Any[Routes.NamedParam(2,:day,r"(\d\d\d\d-\d\d-\d\d)")],Any["./RESULT/",Routes.Part(1),".gz"],r"./RESULT/(?P<day>(\d\d\d\d-\d\d-\d\d)).gz")
 
@@ -19,3 +19,4 @@ RegexMatch("./RESULT/2016-06-11.gz", day="2016-06-11", 2="2016-06-11")
 
 julia> Routes.file( r1, m1.match)
 "./RESULT/./RESULT/2016-06-11.gz.gz"
+```
